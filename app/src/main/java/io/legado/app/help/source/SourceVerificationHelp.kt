@@ -84,7 +84,6 @@ object SourceVerificationHelp {
         refetchAfterSuccess: Boolean? = true
     ) {
         source ?: throw NoStackTraceException("startBrowser parameter source cannot be null")
-        require(url.length < 64 * 1024) { "startBrowser parameter url too long" }
         appCtx.startActivity<WebViewActivity> {
             putExtra("title", title)
             putExtra("url", url)
