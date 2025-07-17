@@ -1355,6 +1355,10 @@ class ReadBookActivity : BaseReadBookActivity(),
         showHelp("readMenuHelp")
     }
 
+    override fun onImagePress(x: Float, y: Float, src: String) {
+        viewModel.refreshImage(src)
+    }
+
     /**
      * 长按图片
      */
